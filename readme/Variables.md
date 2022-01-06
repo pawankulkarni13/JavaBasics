@@ -29,3 +29,12 @@ Abstract method, on the other hand, is an empty method that is ought to be overr
 Mutability Difference: String is immutable, if you try to alter their values, another object gets created, whereas StringBuffer and StringBuilder are mutable so they can change their values.
 Thread-Safety Difference: The difference between StringBuffer and StringBuilder is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.
 
+#### Lambda Expressions Access to other variables
+Access to external scope variables from a lambda expression is very similar to access from anonymous objects.
+
+immutable ( effectively final - not necessarily marked as final) local variables;
+class fields
+static variables.
+The default methods of the implemented functional interface are not allowed to be accessed inside the lambda expression.
+
+ 

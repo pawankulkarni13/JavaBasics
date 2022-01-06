@@ -79,3 +79,26 @@ This generates a compile time error. The output is as follows −
     
     1 error
     
+
+#### Ways to Load class 
+- Creating a reference using new
+
+`Object someInstance = new SomeClazz();`
+
+- Using Class.forName(String):
+
+`Class.forName("SomeClazz");`
+
+- Using SystemClassLoader():
+   
+`ClassLoader.getSystemClassLoader().loadClass("SomeClass");`
+
+- Using Overloaded Class.forName():
+
+`Class.forName(String name, boolean initialize, ClassLoader loader);`
+
+
+#### ClassNotFoundException vs NoClassDefFoundError 
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() methods and mentioned classes are not found in the classpath.
+NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
+

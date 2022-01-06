@@ -79,3 +79,8 @@ Under preemptive scheduling, the highest priority task executes until it enters 
 Until here
 https://www.javatpoint.com/sleep()-method
 
+### Daemon Thread
+Daemon threads are mostly created by the JVM to perform some background tasks like garbage collection.
+
+Learning Materials
+https://github.com/learning-zone/java-interview-questions/blob/master/multithreading-questions.md
