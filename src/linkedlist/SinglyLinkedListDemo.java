@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class SinglyLinkedList {
+public class SinglyLinkedListDemo {
 
     // Represent a node of the singly linked list
     class Node{
@@ -56,7 +56,7 @@ public class SinglyLinkedList {
 
     public static void main(String[] args) {
 
-        SinglyLinkedList sList = new SinglyLinkedList();
+        SinglyLinkedListDemo sList = new SinglyLinkedListDemo();
 
         // Add nodes to the list
         sList.addNode(1);

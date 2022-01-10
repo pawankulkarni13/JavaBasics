@@ -75,3 +75,7 @@ exponential	−	2Ο(n)
 https://www.interviewbit.com/data-structure-interview-questions/
 https://www.javatpoint.com/data-structure-interview-questions
 https://www.geeksforgeeks.org/commonly-asked-data-structure-interview-questions-set-1/
+
+
+### Searching
+DFS and BFS
