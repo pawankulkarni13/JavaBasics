@@ -1,8 +1,18 @@
-package linkedlist;
+package list.linkedlist;
 
 public class SinglyLLMainDemo {
     public static void main(String[] args) {
         SinglyLL singlyLL = new SinglyLL();
+        singlyLL.addNodeInBeginning(6);
+        singlyLL.addNodeInBeginning(5);
+        singlyLL.addNodeInBeginning(4);
+        singlyLL.addNodeInBeginning(3);
+        singlyLL.addNodeInBeginning(2);
+        singlyLL.addNodeInBeginning(1);
+        singlyLL.printNodes(1);
+
+        displayNodes(singlyLL);
+
         System.out.println("singlyLL is empty ? " + singlyLL.isEmpty());
 
         basicDemo(singlyLL);

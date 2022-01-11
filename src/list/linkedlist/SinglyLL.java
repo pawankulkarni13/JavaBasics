@@ -1,9 +1,35 @@
-package linkedlist;
+package list.linkedlist;
 
 import java.util.Stack;
 
 public class SinglyLL {
     private Node head;
+
+    public void printNodes(int a){
+        printNodes(head, a);
+    }
+    private void printNodes(Node start,int a){
+
+        if (start == null)
+
+            return;
+
+        System.out.print(start.data); //Print statement
+
+        if(start.next != null )
+
+            if(a==0){
+
+                printNodes(start.next.next,1);
+
+            }else{
+
+                printNodes(start.next,0);
+
+            }
+
+        System.out.print(start.data);
+    }
 
     public boolean isEmpty() {
         return (head == null);

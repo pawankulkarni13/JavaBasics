@@ -43,3 +43,5 @@ public final class Employee {
    }
 }
 
+    Real-life Use Case where Immutability can be used.
+    Aadhaar System - Once Aadhaar Person Details are fetched. No content shall be changed.
