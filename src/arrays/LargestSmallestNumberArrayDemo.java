@@ -8,6 +8,7 @@ public class LargestSmallestNumberArrayDemo {
 
         int largestNumber = Arrays.stream(numbers).max().getAsInt();
         int smallestNumber = Arrays.stream(numbers).min().getAsInt();
+
         System.out.println("Largest Number is - " + largestNumber);
         System.out.println("Smallest Number is - " + smallestNumber);
 
