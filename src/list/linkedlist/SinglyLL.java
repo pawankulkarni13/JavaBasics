@@ -199,6 +199,25 @@ public class SinglyLL {
         System.out.println(" null");
     }
 
+    public <T> T getMiddle() {
+        int length = 0;
+        Node current = head;
+        while (current != null) {
+            length ++;
+            current = current.next;
+        }
+        int mid = length/2;
+        current = head;
+        int i = 0;
+        while (current != null) {
+            if(i==mid) {
+                return (T) current.data;
+            }
+            i++;
+            current = current.next;
+        }
+        return null;
+    }
 }
 class Node<T> {
     public T data;

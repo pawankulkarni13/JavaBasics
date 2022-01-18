@@ -12,5 +12,10 @@ public class LargestSmallestNumberArrayDemo {
         System.out.println("Largest Number is - " + largestNumber);
         System.out.println("Smallest Number is - " + smallestNumber);
 
+        System.out.println("Largest Number is - " + findMax(numbers));
+    }
+
+    public static int findMax(int[] arr) {
+        return Arrays.stream(arr).reduce(Integer.MIN_VALUE, Integer::max);
     }
 }
