@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
- * Given a sorted array and a number write a method that returns the number of occurances of given number
+ * Given a sorted array and a number write a method that returns the number of occurrences of given number
  */
 public class MaximumOccurenceOfNoInSortedArray {
     public static void main(String[] args) {
