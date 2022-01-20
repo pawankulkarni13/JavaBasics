@@ -24,25 +24,25 @@ public class ReverseNumberDemo {
             reversed *= -1;
         return (int)reversed;
 
-        int n=x;
-        long num=0;
-        boolean negative=false;
-        if(n<0)
-        {
-            negative =true;
-            n=-1*n;
-        }
-        while(n>0)
-        {
-            int r=n%10;
-            num=(num*10)+r*1;
-            n=n/10;
-        }
-        if(negative==true)
-            num=-1*num;
-        if(num<=-2147483648 || num>=2147483647)
-            return 0;
-        return (int)num;
+//        int n=x;
+//        long num=0;
+//        boolean negative=false;
+//        if(n<0)
+//        {
+//            negative =true;
+//            n=-1*n;
+//        }
+//        while(n>0)
+//        {
+//            int r=n%10;
+//            num=(num*10)+r*1;
+//            n=n/10;
+//        }
+//        if(negative==true)
+//            num=-1*num;
+//        if(num<=-2147483648 || num>=2147483647)
+//            return 0;
+//        return (int)num;
     }
 
 }

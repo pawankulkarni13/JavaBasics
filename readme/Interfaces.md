@@ -5,10 +5,12 @@ An interface with no methods is known as marker or tagged interface. It provides
 
 ### Functional Interface
 A functional interface is an interface that defines only one abstract method.
-
+Due to which it is also known as the Single Abstract Method (SAM) interface.
 To accurately determine the interface as functional, an annotation has been added @FunctionalInterface that works on the principle of @Override. It will designate a plan and will not allow to define the second abstract method in the interface.
 
 An interface can include as many default methods as you like while remaining functional, because default methods are not abstract.
+
+Examples: Runnable, Callable, Comparator, Comparable, Supplier, Consumer, Predicate and Function
 
 ### Default Methods
 Methods which are non-abstract implementations in Interface. prefixed with keyword "default".
