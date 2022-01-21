@@ -56,3 +56,51 @@ A Tree where every internal node has one child. Such trees are performance-wise 
       40
 
 https://github.com/eugenp/tutorials/tree/master/data-structures/src/main/java/com/baeldung
+
+#### Tree Traversals (Inorder, Preorder and Postorder)
+
+        1
+       / \
+      2   3
+     / \
+    4   5
+    
+#### Depth First Traversals: 
+1.  Inorder (Left, Root, Right) : 4 2 5 1 3 
+2.  Preorder (Root, Left, Right) : 1 2 4 5 3 
+3.  Postorder (Left, Right, Root) : 4 5 2 3 1
+
+#### Breadth-First or Level Order Traversal: 1 2 3 4 5 
+
+Algorithm Inorder(tree)
+1. Traverse the left subtree, i.e., call Inorder(left-subtree)
+2. Visit the root.
+3. Traverse the right subtree, i.e., call Inorder(right-subtree)
+
+Uses of Inorder 
+In the case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order. To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal s reversed can be used. 
+Example: In order traversal for the above-given figure is 4 2 5 1 3.
+
+Algorithm Preorder(tree)
+1. Visit the root.
+2. Traverse the left subtree, i.e., call Preorder(left-subtree)
+3. Traverse the right subtree, i.e., call Preorder(right-subtree) 
+
+Uses of Preorder 
+Preorder traversal is used to create a copy of the tree. Preorder traversal is also used to get prefix expression on an expression tree. 
+Example: Preorder traversal for the above-given figure is 1 2 4 5 3.
+
+Algorithm Postorder(tree)
+1. Traverse the left subtree, i.e., call Postorder(left-subtree)
+2. Traverse the right subtree, i.e., call Postorder(right-subtree)
+3. Visit the root.
+
+Uses of Postorder 
+Postorder traversal is used to delete the tree. 
+Postorder traversal is also useful to get the postfix expression of an expression tree.
+Example: Postorder traversal for the above-given figure is 4 5 2 3 1.
+
+It is not possible to construct a general Binary Tree from preorder and postorder traversals.
+But if the tree is mentioned as Full Binary Tree. we can construct the tree without ambiguity
+A Full Binary Tree is a binary tree where every node has either 0 or 2 children
+
