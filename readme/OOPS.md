@@ -27,6 +27,29 @@ Polymorphism refers to the process by which some code, data, method, or object b
 
 The term “inheritance” means “receiving some quality or behavior from a parent to an offspring.” In object-oriented programming, inheritance is the mechanism by which an object or class (referred to as a child) is created using the definition of another object or class (referred to as a parent). Inheritance not only helps to keep the implementation simpler but also helps to facilitate code reuse.
 
+Why multiple inheritance not supported in Java?
+
+When a class inherit from two or more classes, there is a chance two methods with same signature exist in both the super classes. So compiler will face ambiguity situation on choosing between the two method implementation. So in Java, multiple inheritance is not supported by default.
+
+    class A {
+    
+    }
+    
+    class B {
+    
+    }
+    
+    class C extends A,B {
+    
+    // Error not possible
+    
+    }
+
+How multiple inheritance indirectly achieved in Java?
+In Java, multiple inheritance is indirectly implemented using Interface. So a class can implement more than one interface at time.
+
+If two interfaces have methods with same signature, Java will take the implementation given in the class for both the interface methods.
+
 ### Abstraction
 Abstraction is the method of hiding unnecessary details from the necessary ones. It is one of the main features of OOPs. 
 For example, consider a car. You only need to know how to run a car, and not how the wires are connected inside it. This is obtained using Abstraction.

@@ -13,6 +13,24 @@ public class BinarySearchInArrayInts {
         index = customBinarySearch(integers,elementToSearch);
         System.out.println(elementToSearch+" present at index - "+ index);
 
+        System.out.println("Recursive Binary Search");
+        index = binarySearchRecursive(integers, 0, integers.length-1, elementToSearch);
+        System.out.println(elementToSearch+" present at index - "+ index);
+    }
+
+    private static int binarySearchRecursive(int[] arr, int first, int last, int elementToSearch) {
+        if (last>=first){
+            int mid = first + (last - first)/2;
+            if (arr[mid] == elementToSearch){
+                return mid;
+            }
+            if (arr[mid] > elementToSearch){
+                return binarySearchRecursive(arr, first, mid-1, elementToSearch);//search in left subarray
+            }else{
+                return binarySearchRecursive(arr, mid+1, last, elementToSearch);//search in right subarray
+            }
+        }
+        return -1;
     }
 
     private static int customBinarySearch(int values[], int target)

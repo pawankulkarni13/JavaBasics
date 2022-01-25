@@ -39,7 +39,7 @@ https://github.com/gothinkster/realworld
 https://medium.com/better-programming/which-java-microservice-framework-should-you-choose-in-2020-4e306a478e58
 https://www.infoq.com/news/2018/10/oracle-introduces-helidon/
 https://www.infoq.com/news/2018/10/oracle-introduces-helidon/
-
+https://github.com/Vedenin/useful-java-links
 ==============================================================================
 
 ## Microservices
@@ -127,6 +127,9 @@ https://winterbe.com/posts/2018/09/24/java-11-tutorial/
 Imp - https://github.com/akullpp/awesome-java
 https://github.com/winterbe/java8-tutorial
 https://github.com/eugenp/tutorials
+https://github.com/Suryakant-Bharti/Important-Java-Concepts
+https://github.com/Vedenin/awesome-java
+https://github.com/Suryakant-Bharti/Important-Java-Concepts
 
 ### Method References
 
@@ -165,9 +168,12 @@ https://www.baeldung.com/spring-framework-design-patterns
 ## Data Structures
 https://www.xmind.net/m/rH8P/
 https://www.geeksforgeeks.org/data-structures/
+https://github.com/sherxon/AlgoDS
 ==============================================================================
 
 ## Design Patterns
+https://github.com/sid24rane/System-Design-Interview-Questions
+
 Imp - https://github.com/iluwatar/java-design-patterns
 https://refactoring.guru/design-patterns/structural-patterns
 
@@ -177,6 +183,23 @@ https://stackabuse.com/structural-design-patterns-in-java/
 
 https://www.gofpatterns.com/design-patterns/module5/structural-design-pattern.php
 https://www.wickedlysmart.com/head-first-design-patterns/
+
+==============================================================================
+
+## RabbitMQ
+https://github.com/iamvickyav/interview-preparation/blob/master/Async%20Messaging/RabbitMQ-starter.md
+
+==============================================================================
+
+## Kubernetes
+https://github.com/iamvickyav/interview-preparation/tree/master/Docker%20%26%20Containerization/Kubernetes
+
+============================================================================================================================================================
+
+## JPA
+https://www.objectdb.com/java/jpa/persistence
+
+==============================================================================
 
 ==============================================================================
 

@@ -1,6 +1,7 @@
 ### Marker Interface
 
-An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code. Example: Serializable, Clonnable etc.
+An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code. 
+Example: Serializable, Clonnable etc.
 
 
 ### Functional Interface

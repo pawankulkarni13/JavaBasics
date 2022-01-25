@@ -76,11 +76,33 @@ Only one thread at a time can run in a single process.
 The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.
 Under preemptive scheduling, the highest priority task executes until it enters the waiting or dead states or a higher priority task comes into existence. Under time slicing, a task executes for a predefined slice of time and then reenters the pool of ready tasks. The scheduler then determines which task should execute next, based on priority and other factors.
 
+### Thread State
+name, alive/dead, execution state, priority, daemon or non daemon
+Execution State - NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+
 Until here
 https://www.javatpoint.com/sleep()-method
 
 ### Daemon Thread
 Daemon threads are mostly created by the JVM to perform some background tasks like garbage collection.
+
+- Synchronization
+
+solves race condition
+ensure thread safely update shared variable
+Syncronized code is called Critical section
+How Synchronization works
+JVM supports Synchronization via Monitors. Every job object is associated with a monitor.
+
+Monitor is a mutual exclusion construct that prevents multiple threads from concurrently entering critical section
+
+Before thread enters critical section, it must get a lock from monitor
+
+If monitor is already locked, Thread will go to BLOCKED state
+
+When thread gets access to critical section, shared variables are copied to thread's working memory & will be written back to main memory once thread complete exection
+
+When syncronized keyword added to static method, lock is on java.lang.Class object
 
 Learning Materials
 https://github.com/learning-zone/java-interview-questions/blob/master/multithreading-questions.md

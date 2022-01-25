@@ -78,7 +78,12 @@ This generates a compile time error. The output is as follows −
     overridden method is static
     
     1 error
-    
+
+Can we Overload or Override static methods in java? 
+- Overriding : Overriding is related to run-time polymorphism. A subclass (or derived class) provides a specific implementation of a method in superclass (or base class) at runtime.
+- Overloading: Overloading is related to compile time (or static) polymorphism. This feature allows different methods to have same name, but different signatures, especially number of input parameters and type of input paramaters.
+- Can we overload static methods?   The answer is ‘Yes’. We can have two ore more static methods with same name, but differences in input parameters
+- Can we Override static methods in java?  We can declare static methods with same signature in subclass, but it is not considered overriding as there won’t be any run-time polymorphism. Hence the answer is ‘No’. Static methods cannot be overridden because method overriding only occurs in the context of dynamic (i.e. runtime) lookup of methods. Static methods (by their name) are looked up statically (i.e. at compile-time).    
 
 #### Ways to Load class 
 - Creating a reference using new

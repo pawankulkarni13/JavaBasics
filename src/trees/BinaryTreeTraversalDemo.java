@@ -1,5 +1,6 @@
 package trees;
 
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -57,6 +58,10 @@ public class BinaryTreeTraversalDemo {
         System.out.println("Level Order Traversal to Demonstrate BFS");
         tree.levelOrderTraversal();
         System.out.println();
+
+        System.out.println("Print Tree In Visual Order - ");
+        tree.printTree();
+
     }
 }
 
@@ -345,6 +350,57 @@ class BinaryTree {
         else if (level > 1) {
             displayCurrentLevel(root.left, level - 1);
             displayCurrentLevel(root.right, level - 1);
+        }
+    }
+
+    public void printTree() {
+        try (PrintStream os = new PrintStream(System.out, true)) {
+            os.print(traversePreOrder(root));
+
+        }
+    }
+    private String traversePreOrder(Node root) {
+
+        if (root == null) {
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(root.key);
+
+        String pointerRight = "└──";
+        String pointerLeft = (root.right != null) ? "├──" : "└──";
+
+        traverseNodes(sb, "", pointerLeft, root.left, root.right!= null);
+        traverseNodes(sb, "", pointerRight, root.right, false);
+
+        return sb.toString();
+    }
+
+    private void traverseNodes(StringBuilder sb, String padding, String pointer, Node node,
+                               boolean hasRightSibling) {
+
+        if (node != null) {
+
+            sb.append("\n");
+            sb.append(padding);
+            sb.append(pointer);
+            sb.append(node.key);
+
+            StringBuilder paddingBuilder = new StringBuilder(padding);
+            if (hasRightSibling) {
+                paddingBuilder.append("│  ");
+            } else {
+                paddingBuilder.append("   ");
+            }
+
+            String paddingForBoth = paddingBuilder.toString();
+            String pointerRight = "└──";
+            String pointerLeft = (node != null) ? "├──" : "└──";
+
+            traverseNodes(sb, paddingForBoth, pointerLeft, node.left, node.right != null);
+            traverseNodes(sb, paddingForBoth, pointerRight, node.right, false);
+
         }
     }
 }

@@ -7,6 +7,14 @@
 `public int limitless;   // will persist`
 
 **Volatile**: The volatile modifier tells the JVM that writes to the field should always be synchronously flushed to memory, and that reads of the field should always read from memory. This means that fields marked as volatile can be safely accessed and updated in a multi-thread application without using native or standard library-based synchronization.
+Indicate to JVM that Thread should not cache value of this variable and always read it from main memory
+
+Can be used only with variable
+After Java 5, write to any volatile variable happens before any read into the volatile variable
+Helps in achieving "happens-before" relationship in Java Memory model
+
+Usage -
+Double & Long are 64 bits hence platform dependence. Write may happen in two 32 bit write steps. Hence chance of missing one write by another. Hence use volatile In achieving Singleton
 
     public class MyRunnable implements Runnable {
        private volatile boolean active;

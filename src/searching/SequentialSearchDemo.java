@@ -1,5 +1,6 @@
 package searching;
 
+//Also known as LinerSearch
 public class SequentialSearchDemo {
 
     public static void main(String[] args) {
