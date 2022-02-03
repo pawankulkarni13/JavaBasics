@@ -15,3 +15,33 @@
 
 - How do you check the equality of two arrays in java?
 > Arrays.equals()
+
+- Uber, Ola cab booking : show nearest available cars (BFS). Which DS can help navigate ?
+> Graphs
+
+- Maven dependencies build order ( Topological sorting (DFS)). How is the dependency built ?
+> Graphs
+
+- File system : Folders and subfolders (N-ary tree). How do you represent these in DS ?
+> Trees
+
+- e-commerce websites : category -> subcategories -> products. How do you show this in DS category ?
+> Trees
+
+- While booking bus/flights , you get list of available routes. How is this handled ?
+> Graphs
+
+- In Facebook, users are considered to be the vertices and if they are friends then there is an edge running between them. 
+Facebook’s Friend suggestion algorithm uses graph theory. 
+Facebook is an example of undirected graph.
+
+- If you delete a picture in your phone, it will be "recently delete" folder which says "the images will be deleted permanently after one week".
+ Here all the images are stored in queue so its easier to pop from the rear based on the image deletion date.
+> Queues
+
+- Waiting list: during online registrations, sometimes you ll be put into waiting list. 
+> basically all the requests will be stored in queue.
+
+- If you had to implement back functionality in the internet browser. Which DS would you choose ?
+> Stack
+

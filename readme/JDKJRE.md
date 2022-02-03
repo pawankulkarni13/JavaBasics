@@ -7,3 +7,26 @@ JRE: Java Runtime Environment provides a platform to execute java programs. JRE 
 <img src="/resources/jdk.jpg" alt="Java Compiler" />
 
 Refer: jdk.jpg
+
+#### What is JVM?
+
+JVM is Java Virtual Machine. It simply means that it’s a machine where java code is running. it has main four things to do — load class file, verify a class file, execute a class file, have JRE for the environment.
+
+Now let’s understand how JVM works?
+JVM contains the following things in build :
+- Classloader is basically used to run java files. Whenever a class file is created first it is run by the classloader.
+- Class Area is where used to store content related to class for example if we have written any method or nested class it all stores inside the class area.
+- Heap is just memory storage. when you created a class that needs an object to run. heap used to have run environment store objects.
+- Stack is a data structure in which helps to maintain and store method return value or system information.
+- The program counter register is holding the current address of JVM which is allocated.
+- Execution Engine is used to improve the performance of JVM. It contains a virtual processor, interpreter, and just-in-time compiler.
+
+#### What is JRE?
+JRE is a java runtime environment. 
+It is a combination of JVM and a set of libraries and other files. 
+It is just run time environment for developing java applications. 
+It contains a software tool for building java projects.
+
+#### What is JDK?
+JDK is a java development kit. It contains two things like JRE and development tools like java and javac etc. 
+JDK is free for us.

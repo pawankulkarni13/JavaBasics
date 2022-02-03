@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -32,6 +33,7 @@ public class EmployeeStreamDemo {
                         Collectors.counting()));
         System.out.println("Grouping and Counting based on Grade \n" + employeeCountAsLongBasedOnGrade);
 
+        employeeCountAsLongBasedOnGrade.values().stream().max(Comparator.naturalOrder());
         Map<Integer, Integer> employeeCountAsIntegerBasedOnGrade = employees.stream()
                 .collect(Collectors.groupingBy(Employee::getGrade,
                         Collectors.collectingAndThen(Collectors.counting(),

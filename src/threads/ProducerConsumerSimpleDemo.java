@@ -11,14 +11,10 @@ public class ProducerConsumerSimpleDemo {
         //Lets create Producer and Consumer Threads and start them.
         Thread threadOne = new Thread(new Runnable() {
             @Override
-            public void run()
-            {
-                try
-                {
+            public void run() {
+                try {
                     pc.produce();
-                }
-                catch(InterruptedException e)
-                {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
@@ -26,14 +22,10 @@ public class ProducerConsumerSimpleDemo {
 
         Thread threadTwo = new Thread(new Runnable() {
             @Override
-            public void run()
-            {
-                try
-                {
+            public void run() {
+                try {
                     pc.consume();
-                }
-                catch(InterruptedException e)
-                {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
@@ -46,24 +38,20 @@ public class ProducerConsumerSimpleDemo {
         threadTwo.join();
     }
 
-    public static class ProducerConsumer
-    {
+    public static class ProducerConsumer {
         // Create a list shared by producer and consumer
         // Size of list is capacity.
         LinkedList<Integer> list = new LinkedList<>();
         int capacity = 3;
 
         // Function called by producer thread
-        public void produce() throws InterruptedException
-        {
+        public void produce() throws InterruptedException {
             int value = 0;
-            while (true)
-            {
-                synchronized (this)
-                {
+            while (true) {
+                synchronized (this) {
                     // producer thread waits while list
                     // is full
-                    while (list.size()==capacity) {
+                    while (list.size() == capacity) {
                         System.out.println("-------------------Producer Capacity - Full List-------------------");
                         wait();
                     }
@@ -85,15 +73,12 @@ public class ProducerConsumerSimpleDemo {
         }
 
         // Function called by consumer thread
-        public void consume() throws InterruptedException
-        {
-            while (true)
-            {
-                synchronized (this)
-                {
+        public void consume() throws InterruptedException {
+            while (true) {
+                synchronized (this) {
                     // consumer thread waits while list
                     // is empty
-                    while (list.size()==0) {
+                    while (list.size() == 0) {
                         System.out.println("-------------------Consumer Waiting - Empty List-------------------");
                         wait();
                     }

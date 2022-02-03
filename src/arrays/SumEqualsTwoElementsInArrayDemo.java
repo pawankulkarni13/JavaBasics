@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Given an integer array and an integer value X, return two elements in that array such that sum of them equals to X.
  */
@@ -12,6 +15,23 @@ public class SumEqualsTwoElementsInArrayDemo {
         System.out.println(nos[0]);
         System.out.println(nos[1]);
 
+        nos = findNosEqualToSumAlternate(numbers, 91);
+        System.out.println("Numbers are - ");
+        System.out.println(nos[0]);
+        System.out.println(nos[1]);
+
+    }
+
+    private static int[] findNosEqualToSumAlternate(int[] numbers, int i) {
+        Set set = new HashSet();
+        for(int num: numbers){
+            if(set.add(num)){
+                if(set.contains(i-num)){
+                    return new int[]{num,i-num};
+                }
+            }
+        }
+        return null;
     }
 
     private static int[] findNosEqualToSum(int[] numbers, int i) {

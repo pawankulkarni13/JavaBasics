@@ -104,5 +104,34 @@ When thread gets access to critical section, shared variables are copied to thre
 
 When syncronized keyword added to static method, lock is on java.lang.Class object
 
+
+### Semaphore
+A semaphore controls access to a shared resource through the use of a counter. If the counter is greater than zero, then access is allowed. If it is zero, then access is denied. What the counter is counting are permits that allow access to the shared resource. Thus, to access the resource, a thread must be granted a permit from the semaphore.
+    
+Working of semaphore
+    
+In general, to use a semaphore, the thread that wants access to the shared resource tries to acquire a permit.
+    
+If the semaphore’s count is greater than zero, then the thread acquires a permit, which causes the semaphore’s count to be decremented.
+Otherwise, the thread will be blocked until a permit can be acquired.
+When the thread no longer needs an access to the shared resource, it releases the permit, which causes the semaphore’s count to be incremented.
+If there is another thread waiting for a permit, then that thread will acquire a permit at that time.
+Java provide Semaphore class in java.util.concurrent package that implements this mechanism
+
+Mutex acts similarly to a binary semaphore, we can use it to implement mutual exclusion.
+
+    Semaphores – Restrict the number of threads that can access a resource. Example, limit max 10 connections to access a file simultaneously.
+    Mutex – Only one thread to access a resource at once. Example, when a client is accessing a file, no one else should have access the same file at the same time.
+
+Mutex is the Semaphore with an access count of 1
+
+### Race Condition
+A race condition occurs when two or more threads can access shared data and 
+they try to change it at the same time. 
+Because the thread scheduling algorithm can swap between threads at any time, 
+you don't know the order in which the threads will attempt to access the shared data. 
+Therefore, the result of the change in data is dependent on the thread scheduling 
+algorithm, i.e. both threads are "racing" to access/change the data.
+
 Learning Materials
 https://github.com/learning-zone/java-interview-questions/blob/master/multithreading-questions.md

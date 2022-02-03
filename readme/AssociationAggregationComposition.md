@@ -1,8 +1,10 @@
 Refer: aggregation.png
 
-    Aggregation: We call aggregation those relationships whose objects have an independent lifecycle, but there is ownership, and child objects cannot belong to another parent object.\
+    Aggregation: We call aggregation those relationships whose objects have an independent 
+    lifecycle, but there is ownership, and child objects cannot belong to another parent object.
 
-Example: Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
+Example: Since Organization has Person as employees, the relationship between them is Aggregation. 
+Here is how they look like in terms of Java classes
 
 `public class Organization {
     private List employees;
@@ -13,9 +15,12 @@ Example: Since Organization has Person as employees, the relationship between th
 }
 `
 
-    Composition: We use the term composition to refer to relationships whose objects don’t have an independent lifecycle, and if the parent object is deleted, all child objects will also be deleted.
+    Composition: We use the term composition to refer to relationships whose objects don’t 
+    have an independent lifecycle, and if the parent object is deleted, all child objects 
+    will also be deleted.
 
-Example: Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
+Example: Since Engine is-part-of Car, the relationship between them is Composition. 
+Here is how they are implemented between Java classes.
 
     public class Car {
          //final will make sure engine is initialized

@@ -7,18 +7,12 @@ public class StringTestDemo {
 
     final int variable = 30;
 
-    int foo(int a)
-
-    {
-
-        return a + 5;
-
-    }
     public static void main(String[] args) {
 
         final int result = 20;
 
-        final int anotherVar;;
+        final int anotherVar;
+        ;
 
         StringTestDemo f = new StringTestDemo();
 
@@ -46,8 +40,8 @@ public class StringTestDemo {
             }
         }
 
-            //1
-        String a  = "test";
+        //1
+        String a = "test";
 
         String b = new String("test");
 
@@ -55,11 +49,11 @@ public class StringTestDemo {
 
         String d = "test";
 
-        System.out.println(b==c);
+        System.out.println(b == c);
 
-        System.out.println(a==c);
+        System.out.println(a == c);
 
-        System.out.println(a==d);
+        System.out.println(a == d);
 
         //2
 //        if (foo(256)){
@@ -71,6 +65,12 @@ public class StringTestDemo {
 //            System.out.println("Invalid");
 //
 //        }
+    }
+
+    int foo(int a) {
+
+        return a + 5;
+
     }
 
     /*public static boolean foo(int a){
