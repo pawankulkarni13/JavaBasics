@@ -1,3 +1,7 @@
+<a href='https://coveralls.io/github/pawankulkarni13/JavaBasics?branch=master'><img src='https://coveralls.io/repos/github/pawankulkarni13/JavaBasics/badge.svg?branch=master' alt='Coverage Status' /></a>
+
+[![Build Status](https://app.travis-ci.com/pawankulkarni13/JavaBasics.svg?branch=master)](https://app.travis-ci.com/pawankulkarni13/JavaBasics)
+
 ### Editions of Java
 
 Each edition of Java has different capabilities. There are three editions of Java:

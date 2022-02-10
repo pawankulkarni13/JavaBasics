@@ -218,6 +218,24 @@ public class SinglyLL {
         }
         return null;
     }
+
+    private Node swapNodes(Node head) {
+        if(head ==null || head.next==null)
+            return head;
+
+        Node secondNode = head.next;
+        Node thirdNode = secondNode.next;
+
+        secondNode.next = head;
+        head.next = swapNodes(thirdNode);
+
+        return secondNode;
+    }
+    public void swapNodes() {
+        Node node = swapNodes(this.head);
+        this.head = node;
+        display();
+    }
 }
 class Node<T> {
     public T data;

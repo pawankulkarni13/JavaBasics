@@ -24,6 +24,9 @@ public class SinglyLLMainDemo {
         reverseNodes(singlyLL);
         displayNodes(singlyLL);
 
+        System.out.println("Swap LinkedList now - ");
+        singlyLL.swapNodes();
+
         SinglyLL singlyLL2 = new SinglyLL();
         mergeLL(singlyLL,singlyLL2);
 

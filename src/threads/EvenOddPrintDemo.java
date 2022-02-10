@@ -1,9 +1,13 @@
 package threads;
 
+import java.util.Arrays;
+import java.util.Calendar;
+
 public class EvenOddPrintDemo {
     static int MAX = 5;
 
     public static void main(String... args) {
+
         NumberPrinter print = new NumberPrinter();
 
         Thread t1 = new Thread(new EvenOdd(print, MAX, false));
