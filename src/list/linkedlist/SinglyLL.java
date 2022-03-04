@@ -102,6 +102,27 @@ public class SinglyLL {
         return deleteNode(head, n);
     }
 
+    void deleteNodeAlternate(Node head, int position){
+        if (head == null)
+            return;
+
+        Node temp = head;
+
+        if (position == 0) {
+            head = temp.next;
+            return;
+        }
+
+        // Find previous node of the node to be deleted inorder to swap with position+1 node.
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.next;
+
+        if (temp == null || temp.next == null)
+            return;
+        Node next = temp.next.next;
+        temp.next = next;
+    }
+
     private Node deleteNode(Node head, int n){
         if (head.next == null){
             return deleteNodeInBeginning(); //Assuming only one node exists !!
@@ -234,6 +255,38 @@ public class SinglyLL {
     public void swapNodes() {
         Node node = swapNodes(this.head);
         this.head = node;
+        display();
+    }
+
+    public void swapNodes(int k) {
+        Node fast = this.head;
+        Node slow = this.head;
+        Node first = head, second = head;
+
+        // Put fast (k-1) nodes after slow
+        for(int i = 0; i < k - 1; ++i)
+            fast = fast.next;
+
+        // Save the node for swapping
+        first = fast;
+
+        // Move until the end of the list
+        while(fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        // Save the second node for swapping
+        // Note that the pointer second isn't necessary: we could use slow for swapping as well
+        // However, having second improves readability
+        second = slow;
+
+        // Swap values
+        Object temp = first.data;
+        first.data = second.data;
+        second.data = temp;
+
+        System.out.println("Swapping Nodes - k = "+k);
         display();
     }
 }

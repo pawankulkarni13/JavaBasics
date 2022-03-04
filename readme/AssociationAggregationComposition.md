@@ -1,3 +1,13 @@
+#### Association
+An Association can be defined as a relationship that has no ownership over another. 
+For example, a person can be associated with multiple banks, and a bank can be related to various people, 
+but no one can own the other.
+
+#### Aggregation
+The term aggregation refers to the relationship between two classes best described as a “whole/part” and “has-a” relationship. 
+This kind is the most specialized version of an association relationship. 
+It contains the reference to another class and is said to have ownership of that class.
+
 Refer: aggregation.png
 
     Aggregation: We call aggregation those relationships whose objects have an independent 

@@ -1,14 +1,17 @@
 package programs;
 
+//  The static initializer is a static {} block of code inside java class,
+//  and run only one time before the constructor or main method is called.
 public class StaticBlockDemo {
-    static
-    {
-        System.out.println("b");
+    public StaticBlockDemo(){
+        System.out.println("Constructor !!!");
+    }
+    static {
+        System.out.println("Static Block !!!");
     }
 
-    public static void main(String[] args)
-    {
-        System.out.println("c");
+    public static void main(String[] args) {
+        System.out.println("Main Method");
 
         System.out.println(Test.i);
     }
@@ -17,10 +20,11 @@ public class StaticBlockDemo {
 class Test {
     static int i;
 
-    static
-    {
-        System.out.println("a");
-
+    public Test(){
+        System.out.println("Test Constructor !!!");
+    }
+    static {
+        System.out.println("Test Static Block !!!");
         i = 100;
     }
 }

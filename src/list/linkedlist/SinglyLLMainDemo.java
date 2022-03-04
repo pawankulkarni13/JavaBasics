@@ -12,6 +12,10 @@ public class SinglyLLMainDemo {
 //        singlyLL.printNodes(1);
 
         displayNodes(singlyLL);
+        singlyLL.swapNodes(4);
+        singlyLL.swapNodes(5);
+        singlyLL.swapNodes(1);
+
         System.out.println("** Middle Node of LinkedList is = " + singlyLL.getMiddle());
 
         displayNodes(singlyLL);

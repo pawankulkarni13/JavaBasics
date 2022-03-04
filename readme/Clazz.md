@@ -104,6 +104,15 @@ Can we Overload or Override static methods in java?
 
 
 #### ClassNotFoundException vs NoClassDefFoundError 
-ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() methods and mentioned classes are not found in the classpath.
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() 
+methods and mentioned classes are not found in the classpath.
 NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
+
+#### Static class
+Java has no way of making a top-level class static but you can simulate a static class like this:
+
+Declare your class final - Prevents extension of the class since extending a static class makes no sense
+Make the constructor private - Prevents instantiation by client code as it makes no sense to instantiate a static class
+Make all the members and functions of the class static - Since the class cannot be instantiated no instance methods can be called or instance fields accessed
+Note that the compiler will not prevent you from declaring an instance (non-static) member. The issue will only show up if you attempt to call the instance member.
 

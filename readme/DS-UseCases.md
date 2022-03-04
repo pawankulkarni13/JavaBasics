@@ -45,3 +45,9 @@ Facebook is an example of undirected graph.
 - If you had to implement back functionality in the internet browser. Which DS would you choose ?
 > Stack
 
+- If you are to use a datatype for password storage which is more preferred char[] or String ?
+> char. Since Strings are immutable there is no way the contents of Strings can be changed because any change will produce new String,
+  while if you char[] you can still set all his elements as blank or zero. 
+  So Storing the password in a character array clearly mitigates security risk of stealing passwords.
+
+- https://vladmihalcea.com/the-best-way-to-detect-database-connection-leaks/

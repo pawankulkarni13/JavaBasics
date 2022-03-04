@@ -92,7 +92,8 @@ Java is best known for its security. With Java, we can develop virus-free system
 
 No explicit pointer
 Java Programs run inside a virtual machine sandbox
-Classloader: Classloader in Java is a part of the Java Runtime Environment (JRE) which is used to load Java classes into the Java Virtual Machine dynamically. It adds security by separating the package for the classes of the local file system from those that are imported from network sources.
+Classloader: Classloader in Java is a part of the Java Runtime Environment (JRE) which is used to load Java classes into the Java Virtual Machine dynamically. 
+It adds security by separating the package for the classes of the local file system from those that are imported from network sources.
 Bytecode Verifier: It checks the code fragments for illegal code that can violate access rights to objects.
 Security Manager: It determines what resources a class can access such as reading and writing to the local disk.
 
@@ -182,11 +183,15 @@ Refer /resources/jvm-architecture.png
 
 #### Classloader
 
-Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
+Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. 
+There are three built-in classloaders in Java.
 
-Bootstrap ClassLoader: This is the first classloader which is the super class of Extension classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java.lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes etc.
+Bootstrap ClassLoader: This is the first classloader which is the super class of Extension classloader. 
+It loads the rt.jar file which contains all class files of Java Standard Edition like java.lang package classes, java.net package classes, java.util package classes, 
+java.io package classes, java.sql package classes etc.
 Extension ClassLoader: This is the child classloader of Bootstrap and parent classloader of System classloader. It loades the jar files located inside $JAVA_HOME/jre/lib/ext directory.
-System/Application ClassLoader: This is the child classloader of Extension classloader. It loads the classfiles from classpath. By default, classpath is set to current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
+System/Application ClassLoader: This is the child classloader of Extension classloader. It loads the classfiles from classpath. 
+By default, classpath is set to current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
 
 These are the internal classloaders provided by Java. If you want to create your own classloader, you need to extend the ClassLoader class.
 
@@ -246,7 +251,19 @@ else: Java else keyword is used to indicate the alternative branches in an if st
 enum: Java enum keyword is used to define a fixed set of constants. Enum constructors are always private or default.
 extends: Java extends keyword is used to indicate that a class is derived from another class or interface.
 final: Java final keyword is used to indicate that a variable holds a constant value. It is used with a variable. It is used to restrict the user from updating the value of the variable.
-finally: Java finally keyword indicates a block of code in a try-catch structure. This block is always executed whether an exception is handled or not.
+- finally: Java finally keyword indicates a block of code in a try-catch structure. This block is always executed whether an exception is handled or not.
+    Yes, finally will be called after the execution of the try or catch code blocks.
+    
+    The only times finally won't be called are:
+    
+    If you invoke System.exit()
+    If you invoke Runtime.getRuntime().halt(exitStatus)
+    If the JVM crashes first
+    If the JVM reaches an infinite loop (or some other non-interruptable, non-terminating statement) in the try or catch block
+    If the OS forcibly terminates the JVM process; e.g., kill -9 <pid> on UNIX
+    If the host system dies; e.g., power failure, hardware error, OS panic, et cetera
+    If the finally block is going to be executed by a daemon thread and all other non-daemon threads exit before finally is called
+
 float: Java float keyword is used to declare a variable that can hold a 32-bit floating-point number.
 for: Java for keyword is used to start a for loop. It is used to execute a set of instructions/functions repeatedly when some condition becomes true. If the number of iteration is fixed, it is recommended to use for loop.
 if: Java if keyword tests the condition. It executes the if block if the condition is true.

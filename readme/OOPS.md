@@ -19,17 +19,33 @@ Encapsulation can also be defined in two different ways:
 2) Data binding: Encapsulation is the process of binding the data members and the methods together as a whole, as a class.
 
 ### Polymorphism
-Polymorphism is composed of two words - “poly” which means “many”, and “morph” which means “shapes”. Therefore Polymorphism refers to something that has many shapes.
+Polymorphism is composed of two words - “poly” which means “many”, and “morph” which means “shapes”. 
+Therefore Polymorphism refers to something that has many shapes.
 
-Polymorphism refers to the process by which some code, data, method, or object behaves differently under different circumstances or contexts. Compile-time polymorphism and Run time polymorphism are the two types of polymorphisms in OOPs languages. 
+Polymorphism refers to the process by which some code, data, method, or object behaves differently under different circumstances or contexts. 
+Compile-time polymorphism and Run time polymorphism are the two types of polymorphisms in OOPs languages. 
+
+Polymorphism is the ability by which, we can create functions or reference variables which behaves differently in different programmatic context.
+
+Compile Time Polymorphism
+In method overloading, an object can have two or more methods with same name, BUT, with their method parameters different. 
+Parameter Type = Type of method parameters can be different.
+Parameter Count = Functions accepting different number of parameters. 
+
+
 
 ### Inheritance
 
-The term “inheritance” means “receiving some quality or behavior from a parent to an offspring.” In object-oriented programming, inheritance is the mechanism by which an object or class (referred to as a child) is created using the definition of another object or class (referred to as a parent). Inheritance not only helps to keep the implementation simpler but also helps to facilitate code reuse.
+The term “inheritance” means “receiving some quality or behavior from a parent to an offspring.” 
+In object-oriented programming, inheritance is the mechanism by which an object or class (referred to as a child) 
+is created using the definition of another object or class (referred to as a parent). 
+Inheritance not only helps to keep the implementation simpler but also helps to facilitate code reuse.
 
 Why multiple inheritance not supported in Java?
 
-When a class inherit from two or more classes, there is a chance two methods with same signature exist in both the super classes. So compiler will face ambiguity situation on choosing between the two method implementation. So in Java, multiple inheritance is not supported by default.
+When a class inherit from two or more classes, there is a chance two methods with same signature exist in both the super classes. 
+So compiler will face ambiguity situation on choosing between the two method implementation. 
+So in Java, multiple inheritance is not supported by default.
 
     class A {
     

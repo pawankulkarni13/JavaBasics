@@ -25,5 +25,15 @@ public class HashMapDemo {
         Object nullObj = null;
         System.out.println("Null Key , Value- " + hashMap.get(nullObj));
 
+        Map map = new HashMap();
+        map.put(1,1);
+        map.put(14,1);
+        map.put(11,1);
+        map.put(10,1);
+        map.put(-1,1);
+        map.put(2,1);
+        System.out.println(map);
+//        map.keySet().stream().sorted().close();
+        System.out.println(map);
     }
 }
