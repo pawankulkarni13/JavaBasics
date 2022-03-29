@@ -2,8 +2,7 @@ package programs;
 
 public class ImmutableDemo {
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Age age = new Age();
         age.setDay(1);
         age.setMonth(1);
@@ -18,14 +17,12 @@ public class ImmutableDemo {
     }
 }
 
-final class Student
-{
+final class Student {
     final int id;
     final String name;
     final Age age;
 
-    public Student(int id,String name,Age age)
-    {
+    public Student(int id, String name, Age age) {
         this.name = name;
         this.id = id;
         Age cloneAge = new Age();
@@ -34,8 +31,8 @@ final class Student
         cloneAge.setYear(age.getYear());
         this.age = cloneAge;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
     public int getId()

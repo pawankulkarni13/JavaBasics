@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class ConcatTwoArraysDemo {
 
     public static void main(String[] args) {
+        Integer in[] = {10,20,30};
+        System.out.println(Arrays.toString(in));
         int numberArrOne[] = {85, 91, 7, 98, 71, 57, 20, 38, 97, 6};
         int numberArrTwo[] = {10, 20, 30, 40, 50};
         int numberArrThree[] = {100, 200, 300};

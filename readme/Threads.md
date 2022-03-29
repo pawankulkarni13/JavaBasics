@@ -106,8 +106,10 @@ When syncronized keyword added to static method, lock is on java.lang.Class obje
 
 
 ### Semaphore
-A semaphore controls access to a shared resource through the use of a counter. If the counter is greater than zero, then access is allowed. If it is zero, then access is denied. What the counter is counting are permits that allow access to the shared resource. Thus, to access the resource, a thread must be granted a permit from the semaphore.
-    
+A semaphore controls access to a shared resource through the use of a counter. If the counter is greater than zero, then access is allowed. 
+If it is zero, then access is denied. What the counter is counting are permits that allow access to the shared resource. 
+Thus, to access the resource, a thread must be granted a permit from the semaphore.
+http://tutorials.jenkov.com/java-util-concurrent/semaphore.html    
 Working of semaphore
     
 In general, to use a semaphore, the thread that wants access to the shared resource tries to acquire a permit.
@@ -149,8 +151,13 @@ A thread pool reuses previously created threads to execute current tasks and off
 
 
 ### CountDownLatch
+http://tutorials.jenkov.com/java-util-concurrent/countdownlatch.html
 CountDownLatch is used to make sure that a task waits for other threads before it starts. To understand its application, 
 let us consider a server where the main task can only start when all the required services have started.
+
+A CountDownLatch is initialized with a given count. This count is decremented by calls to the countDown() method. 
+Threads waiting for this count to reach zero can call one of the await() methods. 
+Calling await() blocks the thread until the count reaches zero.
 
 Working of CountDownLatch:
 When we create an object of CountDownLatch, we specify the number of threads it should wait for, 
@@ -168,11 +175,49 @@ Another difference is that the call() method can throw an exception whereas run(
 ### ExecutorService
 - ThreadPoolExecutor — for executing tasks using a pool of threads. Once a thread is finished executing the task, it goes back into the pool. 
 If all threads in the pool are busy, then the task has to wait for its turn.
+The ThreadPoolExecutor executes the given task (Callable or Runnable) using one of its internally pooled threads.
+
+The thread pool contained inside the ThreadPoolExecutor can contain a varying amount of threads. 
+The number of threads in the pool is determined by these variables:
+corePoolSize
+maximumPoolSize
+If less than corePoolSize threads are created in the the thread pool when a task is delegated to the thread pool, 
+then a new thread is created, even if idle threads exist in the pool.
+If the internal queue of tasks is full, and corePoolSize threads or more are running, but less than maximumPoolSize threads are running, 
+then a new thread is created to execute the task.
+
+
 - ScheduledThreadPoolExecutor allows to schedule task execution instead of running it immediately when a thread is available. 
 It can also schedule tasks with fixed rate or fixed delay.
+The java.util.concurrent.ScheduledExecutorService is an ExecutorService which can schedule tasks to run after a delay, or 
+to execute repeatedly with a fixed interval of time in between each execution. 
+Tasks are executed asynchronously by a worker thread, and not by the thread handing the task to the ScheduledExecutorService.
+
 - ForkJoinPool is a special ExecutorService for dealing with recursive algorithms tasks. If you use a regular ThreadPoolExecutor for a recursive algorithm, 
 you will quickly find all your threads are busy waiting for the lower levels of recursion to finish. 
 The ForkJoinPool implements the so-called work-stealing algorithm that allows it to use available threads more efficiently.
+
+The ForkJoinPool makes it easy for tasks to split their work up into smaller tasks which are then submitted to the ForkJoinPool too. 
+Tasks can keep splitting their work into smaller subtasks for as long as it makes to split up the task.
+Fork
+A task that uses the fork and join principle can fork (split) itself into smaller subtasks which can be executed concurrently.
+By splitting itself up into subtasks, each subtask can be executed in parallel by different CPUs, or different threads on the same CPU.
+
+A task only splits itself up into subtasks if the work the task was given is large enough for this to make sense. 
+There is an overhead to splitting up a task into subtasks, so for small amounts of work this overhead may be greater than 
+the speedup achieved by executing subtasks concurrently.
+
+The limit for when it makes sense to fork a task into subtasks is also called a threshold. It is up to each task to decide on a sensible threshold. 
+It depends very much on the kind of work being done.
+
+Join
+When a task has split itself up into subtasks, the task waits until the subtasks have finished executing.
+Once the subtasks have finished executing, the task may join (merge) all the results into one result. 
+
+- A RecursiveAction is a task which does not return any value. It just does some work, e.g. writing data to disk, and then exits.
+- A RecursiveTask is a task that returns a result. It may split its work up into smaller tasks, and merge the result of these smaller tasks into a collective result. 
+The splitting and merging may take place on several levels. 
+  
 
 
 - If Two Threads Call a Synchronized Method on Different Object Instances Simultaneously, Could One of These Threads Block? What If the Method Is Static?
@@ -193,3 +238,24 @@ Such threads are alive and not blocked, but still, do not make any progress beca
 
 - Starvation is a case of a thread unable to acquire resource because other thread (or threads) occupy it for too long or have higher priority. 
 A thread cannot make progress and thus is unable to fulfill useful work.
+
+### CyclicBarrier
+The java.util.concurrent.CyclicBarrier class is a synchronization mechanism that can synchronize threads progressing through some algorithm. 
+In other words, it is a barrier that all threads must wait at, until all threads reach it, before any of the threads can continue.
+The threads wait for each other by calling the await() method on the CyclicBarrier. 
+Once N threads are waiting at the CyclicBarrier, all threads are released and can continue running.
+
+The waiting threads waits at the CyclicBarrier until either:
+
+The last thread arrives (calls await() )
+The thread is interrupted by another thread (another thread calls its interrupt() method)
+Another waiting thread is interrupted
+Another waiting thread times out while waiting at the CyclicBarrier
+The CyclicBarrier.reset() method is called by some external thread.
+
+### Exchanger
+The java.util.concurrent.Exchanger class represents a kind of rendezvous point where two threads can exchange objects.
+Exchanging objects is done via one of the two exchange() methods.
+
+### Java Locks
+http://tutorials.jenkov.com/java-util-concurrent/lock.html

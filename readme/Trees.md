@@ -1,3 +1,16 @@
+#### AVL Tree
+AVL tree is a self-balancing Binary Search Tree (BST) where the 
+difference between heights of left and right subtrees cannot be more than one for all nodes. 
+
+#### Red Black Tree
+Rules That Every Red-Black Tree Follows: 
+- Every node has a colour either red or black.
+- The root of the tree is always black.
+- There are no two adjacent red nodes (A red node cannot have a red parent or red child).
+- Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.
+- All leaf nodes are black nodes.
+
+
 #### Full Binary Tree 
 
 A Binary Tree is a full binary tree if every node has 0 or 2 children. The following are the examples of a full binary tree. We can also say a full binary tree is a binary tree in which all nodes except leaf nodes have two children. 
@@ -41,7 +54,10 @@ L = I + 1 Where L = Number of leaf nodes, I = Number of internal nodes.
 
 #### Balanced Binary Tree 
 
-A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete. 
+A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. 
+For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 
+1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. 
+Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete. 
 
 #### A degenerate (or pathological) tree
 

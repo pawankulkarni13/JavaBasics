@@ -29,3 +29,7 @@ class Test {
     }
 }
 
+
+//static class StaticClazz{
+//
+//}

@@ -19,11 +19,14 @@ public class HashSetDemo {
         set.add("zn");
         set.add("hzn");
 //        set.add
+        set.remove("zn");
         System.out.println(set);
 //        set.stream().filter(rec-> rec.startsWith("p")).findFirst().isPresent();
         set = (Set) set.stream().collect(Collectors.toCollection(TreeSet::new));
         System.out.println(set);
         set.stream().filter(rec-> rec.charAt(0) == 'a').findFirst();
         System.out.println(Integer.valueOf('a'));
+
+
     }
 }

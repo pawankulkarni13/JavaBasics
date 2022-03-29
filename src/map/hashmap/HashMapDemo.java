@@ -32,6 +32,7 @@ public class HashMapDemo {
         map.put(10,1);
         map.put(-1,1);
         map.put(2,1);
+
         System.out.println(map);
 //        map.keySet().stream().sorted().close();
         System.out.println(map);

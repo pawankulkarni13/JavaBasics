@@ -183,6 +183,7 @@ https://stackabuse.com/structural-design-patterns-in-java/
 
 https://www.gofpatterns.com/design-patterns/module5/structural-design-pattern.php
 https://www.wickedlysmart.com/head-first-design-patterns/
+https://github.com/iluwatar/java-design-patterns
 
 ==============================================================================
 

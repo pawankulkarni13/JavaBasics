@@ -22,7 +22,8 @@ After Java 5, write to any volatile variable happens before any read into the vo
 Helps in achieving "happens-before" relationship in Java Memory model
 
 Usage -
-Double & Long are 64 bits hence platform dependence. Write may happen in two 32 bit write steps. Hence chance of missing one write by another. Hence use volatile In achieving Singleton
+Double & Long are 64 bits hence platform dependence. Write may happen in two 32 bit write steps. 
+Hence chance of missing one write by another. Hence use volatile In achieving Singleton
 
     public class MyRunnable implements Runnable {
        private volatile boolean active;

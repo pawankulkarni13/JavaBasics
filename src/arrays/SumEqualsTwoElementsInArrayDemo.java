@@ -8,7 +8,8 @@ import java.util.Set;
  */
 public class SumEqualsTwoElementsInArrayDemo {
     public static void main(String[] args) {
-        int numbers[] = {85, 91, 7, 98, 71, 57, 20, 38, 97, 6};
+        int numbers[] = new int[]{85, 91, 7, 98, 71, 57, 20, 38, 97, 6};
+        Integer[] input = new Integer[]{2,2,1,1,1,2,2,null};
 
         int [] nos = findNosEqualToSum(numbers, 91);
         System.out.println("Numbers are - ");
