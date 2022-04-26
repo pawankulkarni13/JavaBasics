@@ -40,6 +40,7 @@ public class DuplicateElementsStream {
         return stream.filter(n->!set.add(n)).collect(Collectors.toList());
     }
     private static Set<Integer> duplicateElementsWithoutSet(Stream<Integer> stream) {
+        stream.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
         return stream.collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().filter(m -> m.getValue() > 1).map(Map.Entry::getKey).collect(Collectors.toSet());
     }
     private static Set<Integer> duplicateElementsWithFrequency(List<Integer> list) {

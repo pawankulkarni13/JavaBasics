@@ -1,7 +1,9 @@
 #### Immutable 
 
-Immutable objects are objects that don't change. A Java immutable object must have all its fields be internal, private final fields. It must not implement any setters. It needs a constructor that takes a value for every single field.
-Immutable class means that once an object is created, we cannot change its content. In Java, all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable.
+Immutable objects are objects that don't change. A Java immutable object must have all its fields be internal, private final fields. 
+It must not implement any setters. It needs a constructor that takes a value for every single field.
+Immutable class means that once an object is created, we cannot change its content. 
+In Java, all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable.
 
 
 Creating an Immutable Object
@@ -31,17 +33,19 @@ Rules to create immutable classes
 - Getter method for all the variables in it
 - No setters(To not have the option to change the value of the instance variable)
 
-public final class Employee {  
 
-   final String pancardNumber;  
-   
-   public Employee(String pancardNumber) {  
-      this.pancardNumber = pancardNumber;  
-   }  
-   public String getPancardNumber() {  
-      return pancardNumber;  
-   }
-}
+    public final class Employee {  
+    
+       final String pancardNumber;  
+       
+       public Employee(String pancardNumber) {  
+          this.pancardNumber = pancardNumber;  
+       }  
+       public String getPancardNumber() {  
+          return pancardNumber;  
+       }
+    }
+
 
     Real-life Use Case where Immutability can be used.
     Aadhaar System - Once Aadhaar Person Details are fetched. No content shall be changed.

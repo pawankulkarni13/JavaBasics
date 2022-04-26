@@ -1,5 +1,8 @@
 ### BFS 
-BFS stands for Breadth First Search is a vertex based technique for finding a shortest path in graph. It uses a Queue data structure which follows first in first out. In BFS, one vertex is selected at a time when it is visited and marked then its adjacent are visited and stored in the queue. It is slower than DFS. 
+BFS stands for Breadth First Search is a vertex based technique for finding a shortest path in graph. 
+It uses a Queue data structure which follows first in first out. 
+In BFS, one vertex is selected at a time when it is visited and marked then its adjacent are visited and stored in the queue. 
+It is slower than DFS. 
 
 Input:
 
@@ -13,7 +16,8 @@ Output: A, B, C, D, E, F
 
 
 ### DFS
-DFS stands for Depth First Search is a edge based technique. It uses the Stack data structure, performs two stages, first visited vertices are pushed into stack and second if there is no vertices then visited vertices are popped. 
+DFS stands for Depth First Search is a edge based technique. It uses the Stack data structure, performs two stages, 
+first visited vertices are pushed into stack and second if there is no vertices then visited vertices are popped. 
 
 Input:
 

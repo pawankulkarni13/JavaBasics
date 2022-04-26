@@ -7,7 +7,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentModificationExceptionDemo {
     public static void main(String[] args) {
-
         Map<String,String> myMap = new ConcurrentHashMap<String,String>();
         myMap.put("1", "1");
         myMap.put("2", "1");
