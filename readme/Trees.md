@@ -1,3 +1,15 @@
+### Balanced Tree
+If the height of the left sub-tree and the right sub-tree are equal or differs at most by 1, the tree is known as balanced tree data structure.  
+
+### Binary Search Tree
+Every node in the left subtree must contain a value less than the value of the root node, 
+and the value of each node in the right subtree must be bigger than the value of the root node.
+
+Advantages of Binary search tree
+- Searching an element in the Binary search tree is easy as we always have a hint that which subtree has the desired element.
+- As compared to array and linked lists, insertion and deletion operations are faster in BST.
+
+
 #### AVL Tree
 AVL tree is a self-balancing Binary Search Tree (BST) where the 
 difference between heights of left and right subtrees cannot be more than one for all nodes. 

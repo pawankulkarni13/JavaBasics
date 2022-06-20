@@ -24,9 +24,15 @@ public class HashSetDemo {
 //        set.stream().filter(rec-> rec.startsWith("p")).findFirst().isPresent();
         set = (Set) set.stream().collect(Collectors.toCollection(TreeSet::new));
         System.out.println(set);
+
         set.stream().filter(rec-> rec.charAt(0) == 'a').findFirst();
         System.out.println(Integer.valueOf('a'));
 
+        Set s = new TreeSet();
+        s.add(1);
+        s.add("2");
+        s.add(3);
+        System.out.println(s);
 
     }
 }

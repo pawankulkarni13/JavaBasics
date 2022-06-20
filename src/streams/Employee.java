@@ -44,3 +44,28 @@ public class Employee {
                 '}';
     }
 }
+class BaseC implements Runnable{
+    private Thread t;
+    String threadName;
+    BaseC(String threadName){
+        this.threadName=threadName;
+    }
+    public void run(){
+        while(true)
+            System.out.print(threadName);
+    }
+    public void start(){
+        if(t == null){
+            t= new Thread(this, threadName);
+            t.start();
+        }
+    }
+}
+class ThreadDemo {
+    public static void main(String[] args) {
+        BaseC A = new BaseC("A");
+        BaseC B = new BaseC("B");
+        B.start();
+        A.start();
+    }
+}

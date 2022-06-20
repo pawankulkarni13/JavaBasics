@@ -13,6 +13,8 @@ public class LongestSubStringWithoutRepeatingCharDemo {
         System.out.println("lengthOfLongestSubstring - "+lengthOfLongestSubstring(s));
         s = "pwwkew";
         System.out.println("lengthOfLongestSubstring - "+lengthOfLongestSubstring(s));
+        s = "abcdeart";
+        System.out.println("lengthOfLongestSubstring - "+lengthOfLongestSubstring(s));
     }
 
     private static int lengthOfLongestSubstring(String s) {

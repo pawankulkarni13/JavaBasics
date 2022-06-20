@@ -39,7 +39,7 @@ public class BinaryTreeTraversalDemo {
         System.out.println();
 
         System.out.println("Build Tree Using InOrder and PreOrder Traversals");
-        tree.buildTree(in, pre);
+        tree.buildTreeUsingPreOrder(in, pre);
         System.out.println();
 
         int post [] = {4,5,2,3,1};
@@ -168,8 +168,8 @@ class BinaryTree {
         return -1;
     }
 
-    public void buildTree(int[] in, int[] pre) {
-        Node root = buildTree(in, pre, 0, in.length-1);
+    public void buildTreeUsingPreOrder(int[] in, int[] pre) {
+        Node root = buildTreeUsingPreOrder(in, pre, 0, in.length-1);
 
         System.out.println("Displaying Inorder Traversal Post Building Tree !!");
         displayInorder(root);
@@ -179,7 +179,7 @@ class BinaryTree {
 
     }
 
-    private Node buildTree(int[] in, int[] pre, int inStrt, int inEnd) {
+    private Node buildTreeUsingPreOrder(int[] in, int[] pre, int inStrt, int inEnd) {
         if (inStrt > inEnd)
             return null;
 
@@ -196,8 +196,8 @@ class BinaryTree {
 
         /* Using index in Inorder traversal, construct left and
            right subtress */
-        tNode.left = buildTree(in, pre, inStrt, inIndex - 1);
-        tNode.right = buildTree(in, pre, inIndex + 1, inEnd);
+        tNode.left = buildTreeUsingPreOrder(in, pre, inStrt, inIndex - 1);
+        tNode.right = buildTreeUsingPreOrder(in, pre, inIndex + 1, inEnd);
 
         return tNode;
     }

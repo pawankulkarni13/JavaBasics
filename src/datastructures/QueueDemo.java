@@ -23,6 +23,7 @@ public class QueueDemo {
         q1.add("test02");
         System.out.println(q1);
 
+
         q2.add("pawan");
         q2.add("abc");
         q2.add("xyz");

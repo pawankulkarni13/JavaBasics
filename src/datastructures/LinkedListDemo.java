@@ -8,7 +8,7 @@ import java.util.Map;
 public class LinkedListDemo {
     public static void main(String[] args) {
 
-        List<String> list = new LinkedList<>();
+        LinkedList<String> list = new LinkedList<>();
         list.add("pawan");
         list.add("test");
         list.add("temp");
@@ -16,6 +16,20 @@ public class LinkedListDemo {
         list.add("linkedlist");
         list.add(0,"first");
         System.out.println(list);
+        System.out.println(list.element());
+
+
+        LinkedList<Integer> ll = new LinkedList<>();
+
+        ll.add(1);
+        ll.add(2);
+        ll.add(3);
+        ll.add(4);
+        ll.add(5);
+        ll.add(6);
+
+        System.out.println(ll);
+        System.out.println(ll.element());
 
         Map map = new HashMap<>();
         map.put(3,"3");

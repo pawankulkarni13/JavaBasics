@@ -3,9 +3,17 @@ package datastructures;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class StackDemo {
     public static void main(String[] args) throws Exception {
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(10);
+        stack.push(100);
+        stack.push(1000);
+        System.out.println(stack.search(100));
+
         MyStack myStack = new MyStack(String.class,10);
 
         Scanner s = new Scanner(System.in);

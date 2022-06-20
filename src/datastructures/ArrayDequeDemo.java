@@ -18,22 +18,67 @@ public class ArrayDequeDemo {
      * ArrayDeque has no capacity restrictions.
      */
 
+    static void test(Object o){
+        System.out.println("object");
+    }
+    static void test(ArrayDeque o){
+        System.out.println("array");
+    }
     public static void main(String[] args) {
 
-        ArrayDeque arrayDeque = new ArrayDeque();
-        arrayDeque.add("10");
-        arrayDeque.addFirst("11");
-        arrayDeque.addLast("12");
-        arrayDeque.add("13");
-        arrayDeque.addFirst("14");
-        arrayDeque.addLast("15");
-        arrayDeque.offer("16");
-        arrayDeque.offerFirst("17");
-        arrayDeque.offerLast("18");
-        arrayDeque.offerLast("10");
 
-        arrayDeque.removeFirstOccurrence("10");
-        System.out.println(arrayDeque);
+//        ArrayDeque arrayDeque = new ArrayDeque();
+//        arrayDeque.add("10");
+//        arrayDeque.addFirst("11");
+//        arrayDeque.addLast("12");
+//        arrayDeque.add("13");
+//        arrayDeque.addFirst("14");
+//        arrayDeque.addLast("15");
+//        arrayDeque.offer("16");
+//        arrayDeque.offerFirst("17");
+//        arrayDeque.offerLast("18");
+//        arrayDeque.offerLast("10");
+//
+//        arrayDeque.removeFirstOccurrence("10");
+//        System.out.println(arrayDeque);
+
+        LRU lru = new LRU(3);
+        lru.add(3);
+        lru.add(6);
+        lru.add(9);
+        System.out.println(lru.queue);
+        lru.get(9);
+        System.out.println(lru.queue);
+        lru.add(10);
+        System.out.println(lru.queue);
 
     }
 }
+class LRU {
+    ArrayDeque<Integer> queue ;
+    int capacity;
+
+    LRU(int cap){
+        capacity= cap;
+        queue = new ArrayDeque<Integer>();
+    }
+
+    public void add(int data){
+        if(queue.size() == capacity){
+            System.out.println("Removing Last Recently Used");
+            queue.removeLast();
+            queue.addFirst(data);
+        }else{
+            queue.add(data);
+        }
+    }
+    public int get(int data){
+        if(queue.contains(data)){
+            queue.remove(data);
+            queue.addFirst(data);
+        }
+        return 0;
+    }
+}
+
+

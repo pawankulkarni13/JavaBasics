@@ -5,10 +5,15 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class EmployeeStreamDemo {
     public static void main(String[] args) {
         List<Employee> employees = dataSetup();
+
+        // find first element which is multiple of three
+        IntStream stream = IntStream.of(1, 2, 3, 4, 5, 6);
+        stream.filter(rec->rec%3==0).findFirst();
 
         System.out.println("Employees " + employees);
 

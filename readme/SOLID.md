@@ -75,7 +75,8 @@ This way, you can have a single API for managing the shapes.
 ## Dependency Inversion Principle
 Dependency inversion principle states:
 
-Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, 
+but they should depend on abstractions.
 This principle allows for de-coupling.
 
 Example:

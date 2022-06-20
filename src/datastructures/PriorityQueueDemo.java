@@ -64,7 +64,7 @@ public class PriorityQueueDemo {
         System.out.println(priorityQueueS);
         priorityQueueS.add("");//Valid
         System.out.println(priorityQueueS);
-        priorityQueueS.add(null);
+//        priorityQueueS.add(null);
         while (!priorityQueueS.isEmpty()) {
             System.out.println(priorityQueueS.remove());
         }
